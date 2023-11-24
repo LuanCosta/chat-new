@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
 
-app.get('/', (req, res) => {
+app.get('/teste', (req, res) => {
     res.send('Servidor OK!');
     console.log('Logou aqui');
 
@@ -17,4 +17,4 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => console.log('Cliente desconect'));
 });
 
-server.listen(5000, () => console.log('Servidor rodando na porta 5000')); 
+server.listen(2000, () => console.log('Servidor rodando na porta 2000')); 

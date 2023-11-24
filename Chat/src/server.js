@@ -17,4 +17,4 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => console.log('Cliente desconect'));
 });
 
-server.listen(2000, () => console.log('Servidor rodando na porta 2000')); 
+server.listen(process.env.PORT || 2000, () => console.log('Servidor rodando na porta ' + (process.env.PORT || 2000))); 
